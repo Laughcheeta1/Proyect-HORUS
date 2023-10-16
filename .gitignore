@@ -5,6 +5,11 @@ out/
 .idea/
 HORUS.iml
 
+### PyCharm ###
+
+venv/
+
+
 ### Eclipse ###
 .apt_generated
 .classpath
