@@ -1,7 +1,0 @@
-{
-    "name" : "C130",
-    "purpose" : "Transporte estratégico y táctico. Puede llevar hasta 140 soldados, 64 paracaidistas, o 20 toneladas de carga",
-    "armament" : "No esta armado, pero puede llevar sistemas de autodefensa",
-    "max_speed" : "643 km/h",
-    "Max range" : "5.250 km"
-}
