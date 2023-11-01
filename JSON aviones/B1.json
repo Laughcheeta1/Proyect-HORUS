@@ -1,0 +1,7 @@
+{
+    "name" : "B1",
+    "purpose" : "Bombardero estratégico de largo alcance",
+    "armament" : "Bombas guiadas por laser o gps, misiles de crucero o tierra-aire",
+    "max_speed" : "1,25 Mach",
+    "Max range" : "12.000 km"
+}
