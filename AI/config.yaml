@@ -1,5 +1,5 @@
-train: C:\Users\Usuario\Documents\Universidad\Requisitos y modelos\ImagenesParaIA\Commercial rplanes dataset\Training
-val: C:\Users\Usuario\Documents\Universidad\Requisitos y modelos\ImagenesParaIA\Commercial rplanes dataset\Training
+train: C:\Users\Asus\Desktop\ProyectoHorus\ImagenesParaIA\ComercialPlanes\Training
+val: C:\Users\Asus\Desktop\ProyectoHorus\ImagenesParaIA\ComercialPlanes\Training
 
 names:
   0: A10
