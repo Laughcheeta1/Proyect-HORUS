@@ -1,7 +1,0 @@
-{
-    "name" : "E-2 Hawkeye",
-    "purpose" : "Alerta temprana y control aéreo",
-    "armament" : "No esta armado, pero puede llevar sistemas de autodefensa",
-    "max_speed" : "590 km/h",
-    "Max range" : "2.100 km"
-}

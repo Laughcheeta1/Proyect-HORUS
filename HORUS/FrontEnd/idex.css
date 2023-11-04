@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #3498db, #ff7676); /* Fondo degradado combinando azul y rojo */
+    margin: 0;
+    padding: 20px;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+#resultados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuir elementos de manera uniforme */
+    
+}
+
+h2{
+    text-align: center;
+}
+
+.objeto-section {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 45%;
+}
+
+.objeto-section img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100%;
+    height: auto;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+.objeto-section ul {
+    list-style-type: disc; /* Puntos como marcadores de lista */
+    padding-left: 20px; /* Espaciado a la izquierda para los puntos */
+}
+
+.objeto-section li {
+    margin: 5px 0;
+    font-size: 18px; /* Texto más grande */
+    color: #333; /* Color de texto oscuro para mejorar la legibilidad */
+}
+
+.objeto-section li strong {
+    font-weight: bold;
+    color: #0074d9; /* Color azul para destacar el texto fuerte */
+}
+
+.boton-ok {
+    text-align: center;
+    margin-top: 20px;
+    transition: opacity 0.15s;
+    width: 100%; /* Asegurar que el botón ocupe todo el ancho disponible */
+}
+
+.boton-ok button {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton-ok button:hover {
+    background-color: #0056b3;
+}
+
+.boton-ok:active{
+    opacity: 0.7;
+}

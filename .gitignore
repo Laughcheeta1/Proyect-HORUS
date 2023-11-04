@@ -1,3 +1,9 @@
+ImagenesParaIA/
+runs/
+
+### YOLO ###
+yolov8n.pt
+
 ### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/
@@ -36,3 +42,4 @@ bin/
 .DS_Store
 
 runs/
+/videosTest

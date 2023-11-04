@@ -1,5 +1,5 @@
 from ultralytics import YOLO
 
-model = YOLO("C:\\Users\\Usuario\\Documents\\Universidad\\Requisitos y modelos\\CODE\\runs\\detect\\train20\weights\\best.pt")
+model = YOLO("C:\\Users\\Asus\\Desktop\\ProyectoHorus\\runs\\detect\\train8\\weights\\best.pt")
 
-model.predict("C:\\Users\\Usuario\\Downloads\\TestAI.mp4", save = True, show = True, conf = 0.7)
+model.predict("C:\\Users\\Asus\\Desktop\\ProyectoHorus\\videosTest\\y2mate.com - 10 Minutes of FIGHTER JETS in Action_480p.mp4", save = True, show = True, conf = 0.7)

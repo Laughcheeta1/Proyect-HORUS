@@ -1,7 +1,0 @@
-{
-    "name" : "A400M",
-    "purpose" : "Transporte estratégico y logístico",
-    "armament" : "Sin armamento por defecto, pero puede incluir sistemas de defensa",
-    "max_speed" : "480 km/h",
-    "Max range" : "4.700 km"
-}
