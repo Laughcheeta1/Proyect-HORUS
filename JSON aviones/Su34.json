@@ -1,0 +1,7 @@
+{
+    "name" : "Su-34 Fullback",
+    "purpose" : "Proporciona ataque a tierra y apoyo aereo",
+    "armament" : "Bombas convencionales guiadas por lasers y GPS",
+    "max_speed" : "1.8 Mach",
+    "Max_range" : "4000 Km"
+}

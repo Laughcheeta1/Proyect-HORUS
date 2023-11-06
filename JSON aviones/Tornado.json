@@ -1,0 +1,7 @@
+{
+    "name" : "Tornado",
+    "purpose" : "Proporciona superioridad aerea y ataque a tierra",
+    "armament" : "Bombas convencionales guiadas por lasers y GPS",
+    "max_speed" : "2.2 Mach",
+    "Max_range" : "2800 Km"
+}
