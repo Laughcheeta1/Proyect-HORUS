@@ -4,5 +4,5 @@
     "purpose" : "Bombardero estrategico capaz de penetrar en territorio enemigo y atacar objetivos vitales",
     "armament" : "Bombas nucleares, bombas convencionales y misiles aire-tierra",
     "max_speed" : "0.95 Mach",
-    "Max_range" : "1500 Millas nauticas"
+    "max_range" : "1500 Millas nauticas"
 }

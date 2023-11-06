@@ -4,5 +4,5 @@
     "purpose" : "Interceptar aviones enemigos y ataques a tierra",
     "armament" : "Bombas convencionales guiadas por lasers y GPS",
     "max_speed" : "2.2 Mach",
-    "Max_range" : "1800 Km"
+    "max_range" : "1800 Km"
 }

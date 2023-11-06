@@ -4,5 +4,5 @@
     "purpose" : "Dron de reconocimiento y ataque",
     "armament" : "Misiles aire-tierra",
     "max_speed" : "222 km/h",
-    "Max range" : "300 km"
+    "max_range" : "300 km"
 }

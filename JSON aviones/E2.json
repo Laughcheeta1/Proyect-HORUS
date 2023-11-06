@@ -4,5 +4,5 @@
     "purpose" : "Alerta temprana y control aéreo",
     "armament" : "No esta armado, pero puede llevar sistemas de autodefensa",
     "max_speed" : "590 km/h",
-    "Max range" : "2.100 km"
+    "max_range" : "2.100 km"
 }

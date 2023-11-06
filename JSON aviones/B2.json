@@ -4,5 +4,5 @@
     "purpose" : "Bombardero estratégico de largo alcance y sigilo",
     "armament" : "Bombas guiadas por laser o gps, misiles de crucero o tierra-aire. Puede contener armas nucleares",
     "max_speed" : "0,95 Mach",
-    "Max range" : "11.000 km"
+    "max_range" : "11.000 km"
 }
