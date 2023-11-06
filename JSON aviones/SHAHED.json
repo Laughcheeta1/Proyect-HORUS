@@ -1,5 +1,6 @@
 {
-    "name" : "Shahed",
+    "className" : "Shahed",
+    "name" : "Shahed 136 drone",
     "purpose" : "Municion merodeadora",
     "armament" : "Carga explosiva de 40 kg",
     "max_speed" : "185 km/h",

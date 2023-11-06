@@ -1,5 +1,6 @@
 {
-    "name" : "C-5",
+    "className" : "C5",
+    "name" : "C5",
     "purpose" : "Transporte estratégico de carga pesada",
     "armament" : "No esta armado pero pude llevar sistemas de autodefensa, puede llevar 175 toneladas de peso",
     "max_speed" : "883 km/h",

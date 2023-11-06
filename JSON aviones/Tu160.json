@@ -1,4 +1,5 @@
 {
+    "className" : "Tu160",
     "name" : "Tu-160 Blackjack",
     "purpose" : "Proporciona ataque a tierra y bombardeo estrategico",
     "armament" : "Bombas convencionales guiadas por lasers y GPS",

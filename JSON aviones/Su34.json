@@ -1,4 +1,5 @@
 {
+    "className" : "Su34",
     "name" : "Su-34 Fullback",
     "purpose" : "Proporciona ataque a tierra y apoyo aereo",
     "armament" : "Bombas convencionales guiadas por lasers y GPS",

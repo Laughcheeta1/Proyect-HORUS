@@ -1,4 +1,5 @@
 {
+    "className" : "F18",
     "name" : "F/A 18 Hornet",
     "purpose" : "Detectar aviones enemigos a largas distancias",
     "armament" : "Cañon M61 Vulcan y bombas convencionales guiadas por lasers y GPS",

@@ -1,5 +1,6 @@
 {
-    "name" : "BAYRAKTAR",
+    "className" : "Bayraktar_TB2",
+    "name" : "Bayraktar_TB2",
     "purpose" : "Dron de reconocimiento y ataque",
     "armament" : "Misiles aire-tierra",
     "max_speed" : "222 km/h",

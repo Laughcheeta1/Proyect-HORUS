@@ -1,4 +1,5 @@
 {
+    "className" : "F15",
     "name" : "F15 Eagle",
     "purpose" : "Interceptacion de aviones y ataque a tierra",
     "armament" : "Cañom M61 Vulcan y bombas convecionales guiadas por laser y GPS",

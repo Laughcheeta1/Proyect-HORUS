@@ -1,5 +1,6 @@
 {
-    "name" : "Dron_Comercial",
+    "className" : "Commercial_drone",
+    "name" : "Dron Comercial",
     "purpose" : "indeterminado",
     "armament" : "indeterminado",
     "max_speed" : "indeterminado",

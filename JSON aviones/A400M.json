@@ -1,4 +1,5 @@
 {
+    "className" : "A400",
     "name" : "A400M",
     "purpose" : "Transporte estratégico y logístico",
     "armament" : "Sin armamento por defecto, pero puede incluir sistemas de defensa",

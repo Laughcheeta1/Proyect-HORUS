@@ -1,5 +1,6 @@
 {
-    "name" : "Dron_Suicida",
+    "className" : "Suicide_drone",
+    "name" : "Dron Suicida",
     "purpose" : "Municion merodeadora",
     "armament" : "Explosivos",
     "max_speed" : "indeterminado",

@@ -1,4 +1,5 @@
 {
+    "className" : "Su57",
     "name" : "Su-57 Felon",
     "purpose" : "Detectar y rastrear objetivos terrestres y aereos",
     "armament" : "Bombas convencionales guiadas por lasers y GPS",

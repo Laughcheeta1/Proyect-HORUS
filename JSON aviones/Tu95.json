@@ -1,4 +1,5 @@
 {
+    "className" : "Tu95",
     "name" : "Tu-95 Bear",
     "purpose" : "Proporciona ataque a tierra y bombardeo estrategico",
     "armament" : "Bombas convencionales guiadas por lasers y GPS",
