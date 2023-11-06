@@ -1,0 +1,7 @@
+{
+    "name" : "SR-71 Blackbird",
+    "purpose" : "Recopilar informacion aerea",
+    "armament" : "No puede llevar armamento",
+    "max_speed" : "3.3 Mach",
+    "Max_range" : "3700 Km"
+}

@@ -1,0 +1,7 @@
+{
+    "name" : "Su-57 Felon",
+    "purpose" : "Detectar y rastrear objetivos terrestres y aereos",
+    "armament" : "Bombas convencionales guiadas por lasers y GPS",
+    "max_speed" : "2.83 Mach",
+    "Max_range" : "3500 Km"
+}

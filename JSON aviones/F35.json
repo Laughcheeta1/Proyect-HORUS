@@ -1,0 +1,7 @@
+{
+    "name" : "F-35 lightning II",
+    "purpose" : "Proporciona superioridad aerea y ataques a tierra",
+    "armament" : "Cañon GAU-22/A y bombas convencionales guiadas por lasers y GPS",
+    "max_speed" : "1.6 Mach",
+    "Max_range" : "2200 Km"
+}
