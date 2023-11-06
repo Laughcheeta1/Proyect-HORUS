@@ -1,8 +1,8 @@
 {
     "className" : "V22",
     "name" : "V-22 Osprey",
-    "purpose" : "Detectar y rastrear objetivos en el agua y tierra",
-    "armament" : "Bombas",
+    "purpose" : "Infitracion, extraccion y reabastecimiento de tropas",
+    "armament" : "indeterminado",
     "max_speed" : "550 Km/h",
     "max_range" : "1150 Km"
 }
