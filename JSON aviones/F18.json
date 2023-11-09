@@ -1,0 +1,8 @@
+{
+    "className" : "F18",
+    "name" : "F/A 18 Hornet",
+    "purpose" : "Detectar aviones enemigos a largas distancias",
+    "armament" : "Cañon M61 Vulcan y bombas convencionales guiadas por lasers y GPS",
+    "max_speed" : "1915 Km/h",
+    "max_range" : "2000 Km"
+}

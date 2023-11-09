@@ -1,0 +1,8 @@
+{
+    "className" : "XB70",
+    "name" : "XB-70 Valkyrie",
+    "purpose" : "Proporcionar bombardeo estrategico",
+    "armament" : "Bombas nucleares, bombas convencionales y misiles aire-tierra",
+    "max_speed" : "3.1 Mach",
+    "max_range" : "6900 Km"
+}

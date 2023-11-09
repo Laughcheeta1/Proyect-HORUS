@@ -1,0 +1,8 @@
+{
+    "className" : "AG600",
+    "name" : "AG600",
+    "purpose" : "Apoyo en casos de emergencia, incluyendo extinción de incendios y rescate marítimo",
+    "armament" : "No tiene",
+    "max_speed" : "570 km/h",
+    "max_range" : "5.500 km"
+}

@@ -1,0 +1,8 @@
+{
+    "className" : "F16",
+    "name" : "F16 Fighting Falcon",
+    "purpose" : "Interceptacion de aviones enemigos y ataque a tierra",
+    "armament" : "Cañon M61 Vulcan y bombas convencionales guiadas por lasers y GPS",
+    "max_speed" : "2414 Km/h",
+    "max_range" : "2400 Km"
+}

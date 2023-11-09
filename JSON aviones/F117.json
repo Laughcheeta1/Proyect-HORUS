@@ -1,0 +1,8 @@
+{
+    "className" : "F117",
+    "name" : "F117 Nighthawk",
+    "purpose" : "Ataque a tierra, sin ser detectado",
+    "armament" : "Bombas convencionales guiadas por laser y GPS",
+    "max_speed" : "933 km/h",
+    "max_range" : "2414 Km"
+}

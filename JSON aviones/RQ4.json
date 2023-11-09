@@ -1,0 +1,8 @@
+{
+    "className" : "RQ4",
+    "name" : "RQ-4 Global Hawk",
+    "purpose" : "Proporciona inteligencia, vigilancia y reconocimiento",
+    "armament" : "Bombas convencionales guiadas por lasers y GPS",
+    "max_speed" : "629 Km/h",
+    "max_range" : "24985 Km"
+}

@@ -1,0 +1,8 @@
+{
+    "className" : "Mirage2000",
+    "name" : "Mirage 2000",
+    "purpose" : "Interceptar aviones enemigos y ataques a tierra",
+    "armament" : "Bombas convencionales guiadas por lasers y GPS",
+    "max_speed" : "2.2 Mach",
+    "max_range" : "1800 Km"
+}

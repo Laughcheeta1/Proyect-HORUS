@@ -1,0 +1,8 @@
+{
+    "className" : "Commercial_plane",
+    "name" : "Avion comercial / civil",
+    "purpose" : "indeterminado",
+    "armament" : "indeterminado",
+    "max_speed" : "indeterminado",
+    "max_range" : "indeterminado"
+}

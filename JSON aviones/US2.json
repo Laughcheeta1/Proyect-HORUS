@@ -1,0 +1,8 @@
+{
+    "className" : "US2",
+    "name" : "US-2 ShinMaywa",
+    "purpose" : "Proporciona busqueda y rescate. Ademas de apoyo logistico",
+    "armament" : "Bombas de salvamento",
+    "max_speed" : "560 Km/h",
+    "max_range" : "3700 Km"
+}

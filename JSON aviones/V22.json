@@ -1,0 +1,8 @@
+{
+    "className" : "V22",
+    "name" : "V-22 Osprey",
+    "purpose" : "Infitracion, extraccion y reabastecimiento de tropas",
+    "armament" : "indeterminado",
+    "max_speed" : "550 Km/h",
+    "max_range" : "1150 Km"
+}

@@ -1,0 +1,8 @@
+{
+    "className" : "U2",
+    "name" : "U-2",
+    "purpose" : "Proporcionar reconocimiento estrategico",
+    "armament" : "No puede tener armamento",
+    "max_speed" : "0.8 Mach",
+    "max_range" : "7200 Km"
+}

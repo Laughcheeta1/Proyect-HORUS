@@ -1,0 +1,8 @@
+{
+    "className" : "Be200",
+    "name" : "BE200",
+    "purpose" : "Plataforma de extinción de incendios, rescate marítimo y transporte",
+    "armament" : "No tiene armamento",
+    "max_speed" : "700 km/h",
+    "max_range" : "3.600 km"
+}

@@ -1,0 +1,8 @@
+{
+    "className" : "B52",
+    "name" : "B52",
+    "purpose" : "Bombardero estratégico de largo alcance",
+    "armament" : "Bombas guiadas por laser o gps, misiles de crucero o tierra-aire. Puede contener armas nucleares",
+    "max_speed" : "0,86 Mach",
+    "max_range" : "14.000 km"
+}
