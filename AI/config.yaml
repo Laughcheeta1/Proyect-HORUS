@@ -1,6 +1,5 @@
-train: C:\Users\Asus\Desktop\ProyectoHorus\ImagenesParaIA\ComercialPlanes\Training
-val: C:\Users\Asus\Desktop\ProyectoHorus\ImagenesParaIA\ComercialPlanes\Training
-
+train: C:\Users\Asus\Desktop\ProyectoHorus\ImagenesParaIA\MIlitary Aircraft\Train
+val: C:\Users\Asus\Desktop\ProyectoHorus\ImagenesParaIA\MIlitary Aircraft\Train
 names:
   0: A10
   1: A400M
