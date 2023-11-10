@@ -22,8 +22,8 @@ class App(customtkinter.CTk):
 
         # configure grid layout (4x4)
         self.grid_columnconfigure(1, weight=1)
-        self.grid_columnconfigure((2, 3), weight=0)
-        self.grid_rowconfigure((0, 1, 2), weight=1)
+       
+        self.grid_rowconfigure((0, 1), weight=1)
 
         def pathFile():
            filePath = filedialog.askopenfilename()
@@ -31,8 +31,67 @@ class App(customtkinter.CTk):
            self.entry_path.insert(0,filePath)
 
         def startRecording():
-            path = self.entry_path.get()
-            Service.startRecording = Service(path)
+            videoPath = self.entry_path.get()
+            serv = Service(videoPath)
+
+            while True:
+                listOfPlanes, numberOfPlanes = serv.readFrame()
+
+                if not serv.successful:
+                    break
+
+                for plane in listOfPlanes:
+                    
+                    name = plane["name"]
+                    purpose = plane["purpose"]
+                    armament = plane["armament"]
+                    maxSpeed = plane["max_speed"]
+                    maxRange = plane["max_range"]
+                    quantityOfThePlane = numberOfPlanes[plane["classNumber"]]
+                    direccionImagen = f"./AIRPLANES/{plane['className']}.jpg"
+
+                    label_image= customtkinter.CTkLabel(self.intFrame, image= customtkinter.CTkImage(dark_image=Image.open(f"./AIRPLANES/{plane['className']}.jpg"), size=(400,300)), text=" ")
+                    label_image.pack(side = "top")
+                    label_dentro1 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Name: {name}")
+                    label_dentro1.pack(side = "top")
+                    label_dentro2 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Purpose: {purpose}")
+                    label_dentro2.pack(side = "top")
+                    label_dentro3 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Armament: {armament}")
+                    label_dentro3.pack(side = "top")
+                    label_dentro4 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Max Speed: {maxSpeed}")
+                    label_dentro4.pack(side = "top")
+                    label_dentro5 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Max Range: {maxRange}")
+                    label_dentro5.pack(side = "top")
+                    label_dentro6 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Quantity: {quantityOfThePlane}")
+                    label_dentro6.pack(side = "top")
+
+                # Show the planes
+
+                
+
+            # Clear the planes from interface
+
+            # List of planes = 
+            # [{
+            #     '_id': ObjectId('65492f38a58418bb8f2611f9'), 
+            #     'className': 'F16', 
+            #     'name': 'F16 Fighting Falcon', 
+            #     'purpose': 'Interceptacion de aviones enemigos y ataque a tierra', 
+            #     'armament': 'Cañon M61 Vulcan y bombas convencionales guiadas por lasers y GPS', 
+            #     'max_speed': '2414 Km/h', 
+            #     'max_range': '2400 Km', 
+            #     'classNumber': 16
+            # },
+            # {
+            #        
+            # }
+            # ]
+
+            # (the first number (key) is the class of the object, the second (value) is the number of times it appears)
+            # Number of planes = 
+            # {
+            #     16: 1
+            # }
 
 
         # create sidebar frame with widgets
@@ -47,7 +106,7 @@ class App(customtkinter.CTk):
         self.label_path.grid(row=1,column = 0, padx = 20, pady = 0)
         self.sidebar_button_1 = customtkinter.CTkButton(self.sidebar_frame,  command = pathFile, text="Select Path")
         self.sidebar_button_1.grid(row=3, column=0, padx=20, pady=0)
-        self.sidebar_button_2 = customtkinter.CTkButton(self.sidebar_frame, command=self.sidebar_button_event, text="Start recording",fg_color="green")
+        self.sidebar_button_2 = customtkinter.CTkButton(self.sidebar_frame, command=startRecording, text="Start recording",fg_color="green")
         self.sidebar_button_2.grid(row=4, column=0, padx=20, pady=10)
       
         self.appearance_mode_label = customtkinter.CTkLabel(self.sidebar_frame, text="Appearance Mode:", anchor="w")
@@ -62,27 +121,8 @@ class App(customtkinter.CTk):
 
        
 
-        self.intFrame = customtkinter.CTkFrame(master = self)
-        self.intFrame.grid( row = 0, column = 1, padx = 5, pady = 5, ipadx = 5, ipady = 5, sticky = "NS")
-
-        self.label_image= customtkinter.CTkLabel(self.intFrame, image= customtkinter.CTkImage(dark_image=Image.open("perro.jpg"), size=(100,100)), text=" ")
-        self.label_image.pack(side = "top")
-        self.label_dentro1 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text="- Name: ")
-        self.label_dentro1.pack(side = "top")
-        self.label_dentro2 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text="- Purpose: ")
-        self.label_dentro2.pack(side = "top")
-        self.label_dentro3 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text="- Armament: ")
-        self.label_dentro3.pack(side = "top")
-        self.label_dentro4 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text="- Max Speed: ")
-        self.label_dentro4.pack(side = "top")
-        self.label_dentro5 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text="- Max Range: ")
-        self.label_dentro5.pack(side = "top")
-        self.label_dentro6 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text="- Quantity: ")
-        self.label_dentro6.pack(side = "top")
-
-        
-        
-
+        self.intFrame = customtkinter.CTkScrollableFrame(master = self, width= 600, height=500)
+        self.intFrame.grid( row = 0, column = 1, padx = 5, pady = 5, ipadx = 5, ipady = 5, rowspan = 2, columnspan = 2)
 
     
 
