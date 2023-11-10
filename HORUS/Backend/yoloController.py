@@ -2,12 +2,12 @@ from ultralytics import YOLO # For remaking Yugoslavia
 import cv2 # For working with images in python
 
 class model:
-    _modelDirection = ""
+    _modelDirection = "C:\\Users\\Usuario\\Documents\\Universidad\\Requisitos y modelos\\CODE\\TheLatestTraining.pt"
 
     def __init__(self, videoDirection):
         # self.videoDirection = videoDirection
         self.videoInput = cv2.VideoCapture(videoDirection)
-        self.model = YOLO(self._modelDirection)
+        self.yoloModel = YOLO(self._modelDirection)
 
         if not self.videoInput.isOpened(): # Check if the video can be opened
             return None
@@ -23,7 +23,7 @@ class model:
 
                 # From the model result ([0] because it is a list, but a list of only 1 element jajaja), get the boxes, convert it to 
                 # cpu, then convert it to numpy, and after that, get the classes that have been detected
-                return self.model(frame, task = detect,  show = True)[0].boxes.cpu().numpy().cls
+                return self.yoloModel(frame, show = True)[0].boxes.cpu().numpy().cls
                     # TODO: Decide whether to return only the clases, or also the bounding boxes
         
         return None # If either the video is not opened or the frame could be read, then return null
