@@ -1,5 +1,5 @@
-from .DatabaseManager import DataBaseManager
-from .yoloController import model
+from DatabaseManager import DataBaseManager
+from yoloController import model
 
 class Service:
     def __init__(self, videoDirection):

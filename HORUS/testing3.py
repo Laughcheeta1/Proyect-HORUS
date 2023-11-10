@@ -1,4 +1,4 @@
-from Backend.Service import Service
+from Service import Service
 
 serv = Service("C:\\Users\\Usuario\\Documents\\Universidad\\Requisitos y modelos\\CODE\\videosTest\\Lockheed Martin  F-35 Lightning II.mp4")
 
