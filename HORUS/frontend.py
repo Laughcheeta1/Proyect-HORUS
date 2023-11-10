@@ -2,7 +2,7 @@ import os
 import sys
 
 import tkinter
-import Service
+from Service import Service
 import tkinter.messagebox
 from tkinter import filedialog
 import customtkinter
@@ -48,7 +48,6 @@ class App(customtkinter.CTk):
                     maxSpeed = plane["max_speed"]
                     maxRange = plane["max_range"]
                     quantityOfThePlane = numberOfPlanes[plane["classNumber"]]
-                    direccionImagen = f"./AIRPLANES/{plane['className']}.jpg"
 
                     label_image= customtkinter.CTkLabel(self.intFrame, image= customtkinter.CTkImage(dark_image=Image.open(f"./AIRPLANES/{plane['className']}.jpg"), size=(400,300)), text=" ")
                     label_image.pack(side = "top")
