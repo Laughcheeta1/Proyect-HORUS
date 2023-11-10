@@ -5,12 +5,16 @@ class Service:
     def __init__(self, videoDirection):
         self.yoloModel = model(videoDirection).readFrame # get the readFrame method from the model
         self.findPlaneMethod = DataBaseManager().getPlaneByClassId # Get the searching method from the database
+        self.successful = True # Intended to represent whether the frame was read succesfully or not
     
 
     # Input: nothing
     # Returns: The Jsons of the detected objects in a list, a dictionary of the times a class appears in the frame
     def readFrame(self):
         planesNumbers = self.yoloModel.readFrame()
+        if planesNumbers is None:
+            self.successful = False
+            return [], {}
 
         quantity = {} # Get the number of planes in each class
         for plane in planesNumbers:
