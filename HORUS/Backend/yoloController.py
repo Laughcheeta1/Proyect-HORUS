@@ -23,7 +23,7 @@ class model:
 
                 # From the model result ([0] because it is a list, but a list of only 1 element jajaja), get the boxes, convert it to 
                 # cpu, then convert it to numpy, and after that, get the classes that have been detected
-                return model.predict(frame, show = True, persist = True)[0].boxes.cpu().numpy().cls
+                return self.model(frame, task = detect,  show = True)[0].boxes.cpu().numpy().cls
                     # TODO: Decide whether to return only the clases, or also the bounding boxes
         
         return None # If either the video is not opened or the frame could be read, then return null
