@@ -2,7 +2,7 @@ import os
 import sys
 
 import tkinter
-from Backend import Service
+import Service
 import tkinter.messagebox
 from tkinter import filedialog
 import customtkinter
