@@ -21,7 +21,7 @@ class App(customtkinter.CTk):
 
         # configure window
         self.title("HORUS AI Object Detector")
-        self.geometry(f"{2200}x{1160}")
+        self.geometry(f"{800}x{600}")
 
         # configure grid layout (4x4)
         self.grid_columnconfigure(1, weight=1)
@@ -114,7 +114,7 @@ class App(customtkinter.CTk):
 
 
         self.intFrame = customtkinter.CTkScrollableFrame(master = self, width= 600, height=500)
-        self.intFrame.grid( row = 0, column = 1, padx = 5, pady = 5, ipadx = 5, ipady = 5, rowspan = 2, columnspan = 2)
+        self.intFrame.grid( row = 0, column = 1, padx = 5, pady = 5, ipadx = 5, ipady = 5, rowspan = 2, columnspan = 2, sticky = "ewns")
 
     
 
