@@ -113,12 +113,7 @@ class App(customtkinter.CTk):
         self.appearance_mode_optionemenu = customtkinter.CTkOptionMenu(self.sidebar_frame, values=["Light", "Dark", "System"],
                                                                        command=self.change_appearance_mode_event)
         self.appearance_mode_optionemenu.grid(row=6, column=0, padx=20, pady=(10, 10))
-        
 
-
-      
-
-       
 
         self.intFrame = customtkinter.CTkScrollableFrame(master = self, width= 600, height=500)
         self.intFrame.grid( row = 0, column = 1, padx = 5, pady = 5, ipadx = 5, ipady = 5, rowspan = 2, columnspan = 2)
