@@ -7,4 +7,6 @@ class DataBaseManager:
     # Input: the class number of the desired plane
     # Returns: the Json stored in the database of that plane
     def getPlaneByClassId(self, classNumber):
-        return self.planes.find_one({"classNumber" : classNumber})
+        plane = self.planes.find_one({"classNumber" : classNumber})
+        print(plane)
+        return plane
