@@ -11,7 +11,7 @@ class Service:
     # Input: nothing
     # Returns: The Jsons of the detected objects in a list, a dictionary of the times a class appears in the frame
     def readFrame(self):
-        planesNumbers = self.read()
+        planesNumbers, frame = self.read()
 
         if planesNumbers is None:
             self.successful = False
@@ -25,4 +25,4 @@ class Service:
             else:
                 quantity[int(plane)] = 1
 
-        return [self.findPlaneMethod(int(classNumber)) for classNumber in quantity.keys()], quantity
+        return [self.findPlaneMethod(int(classNumber)) for classNumber in quantity.keys()], quantity, frame

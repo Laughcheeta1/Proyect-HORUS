@@ -7,6 +7,7 @@ import tkinter.messagebox
 from tkinter import filedialog
 import customtkinter
 from PIL import Image
+from thirdFront import ImageApp
 
 customtkinter.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("green")  # Themes: "blue" (standard), "green", "dark-blue"
@@ -16,9 +17,11 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
+        # self.thirdApp = ImageApp()
+
         # configure window
         self.title("HORUS AI Object Detector")
-        self.geometry(f"{1100}x{580}")
+        self.geometry(f"{2200}x{1160}")
 
         # configure grid layout (4x4)
         self.grid_columnconfigure(1, weight=1)
@@ -31,13 +34,22 @@ class App(customtkinter.CTk):
            self.entry_path.insert(0,filePath)
 
         def startRecording():
+
             videoPath = self.entry_path.get()
             serv = Service(videoPath)
 
-            classList = []
+            # displayJsons = []
 
             while True:
-                listOfPlanes, numberOfPlanes = serv.readFrame()
+                # for Json in displayJsons:
+                #     for item in Json:
+                #         item.destroy()
+                # displayJsons = []
+
+                listOfPlanes, numberOfPlanes, frame = serv.readFrame()
+                # self.thirdApp.changeImage(frame)
+                # self.thirdApp.update()
+                
 
                 if not serv.successful:
                     break
@@ -51,9 +63,7 @@ class App(customtkinter.CTk):
                     maxRange = plane["max_range"]
                     quantityOfThePlane = numberOfPlanes[classNumber]
 
-                    
-
-                    label_image= customtkinter.CTkLabel(self.intFrame, image= customtkinter.CTkImage(dark_image=Image.open(f"./AIRPLANES/{plane['className']}.jpg"), size=(400,300)), text=" ")
+                    label_image = customtkinter.CTkLabel(self.intFrame, image= customtkinter.CTkImage(dark_image=Image.open(f"./AIRPLANES/{plane['className']}.jpg"), size=(400,300)), text=" ")
                     label_image.pack(side = "top")
                     label_dentro1 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Name: {name}")
                     label_dentro1.pack(side = "top")
@@ -68,41 +78,17 @@ class App(customtkinter.CTk):
                     label_dentro6 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Quantity: {quantityOfThePlane}")
                     label_dentro6.pack(side = "top")
 
-                    label_image.after(42,label_image.destroy())
-                    label_dentro1.after(42,label_dentro1.destroy())
-                    label_dentro2.after(42,label_dentro2.destroy())
-                    label_dentro3.after(42,label_dentro3.destroy())
-                    label_dentro4.after(42,label_dentro4.destroy())
-                    label_dentro5.after(42,label_dentro5.destroy())
-                    label_dentro6.after(42,label_dentro6.destroy())
+                    # displayJsons.append([label_image, label_dentro1, label_dentro2, label_dentro3, label_dentro4, label_dentro5, label_dentro6])
+
+                    label_image.after(420,label_image.destroy())
+                    label_dentro1.after(420,label_dentro1.destroy())
+                    label_dentro2.after(420,label_dentro2.destroy())
+                    label_dentro3.after(420,label_dentro3.destroy())
+                    label_dentro4.after(420,label_dentro4.destroy())
+                    label_dentro5.after(420,label_dentro5.destroy())
+                    label_dentro6.after(420,label_dentro6.destroy())
 
                 # Show the planes
-
-                
-
-            # Clear the planes from interface
-
-            # List of planes = 
-            # [{
-            #     '_id': ObjectId('65492f38a58418bb8f2611f9'), 
-            #     'className': 'F16', 
-            #     'name': 'F16 Fighting Falcon', 
-            #     'purpose': 'Interceptacion de aviones enemigos y ataque a tierra', 
-            #     'armament': 'Cañon M61 Vulcan y bombas convencionales guiadas por lasers y GPS', 
-            #     'max_speed': '2414 Km/h', 
-            #     'max_range': '2400 Km', 
-            #     'classNumber': 16
-            # },
-            # {
-            #        
-            # }
-            # ]
-
-            # (the first number (key) is the class of the object, the second (value) is the number of times it appears)
-            # Number of planes = 
-            # {
-            #     16: 1
-            # }
 
 
         # create sidebar frame with widgets
