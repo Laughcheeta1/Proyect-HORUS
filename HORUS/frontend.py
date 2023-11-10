@@ -34,6 +34,8 @@ class App(customtkinter.CTk):
             videoPath = self.entry_path.get()
             serv = Service(videoPath)
 
+            classList = []
+
             while True:
                 listOfPlanes, numberOfPlanes = serv.readFrame()
 
@@ -41,13 +43,15 @@ class App(customtkinter.CTk):
                     break
 
                 for plane in listOfPlanes:
-                    
+                    classNumber = plane["classNumber"]
                     name = plane["name"]
                     purpose = plane["purpose"]
                     armament = plane["armament"]
                     maxSpeed = plane["max_speed"]
                     maxRange = plane["max_range"]
-                    quantityOfThePlane = numberOfPlanes[plane["classNumber"]]
+                    quantityOfThePlane = numberOfPlanes[classNumber]
+
+                    
 
                     label_image= customtkinter.CTkLabel(self.intFrame, image= customtkinter.CTkImage(dark_image=Image.open(f"./AIRPLANES/{plane['className']}.jpg"), size=(400,300)), text=" ")
                     label_image.pack(side = "top")
@@ -63,6 +67,14 @@ class App(customtkinter.CTk):
                     label_dentro5.pack(side = "top")
                     label_dentro6 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Quantity: {quantityOfThePlane}")
                     label_dentro6.pack(side = "top")
+
+                    label_image.after(42,label_image.destroy())
+                    label_dentro1.after(42,label_dentro1.destroy())
+                    label_dentro2.after(42,label_dentro2.destroy())
+                    label_dentro3.after(42,label_dentro3.destroy())
+                    label_dentro4.after(42,label_dentro4.destroy())
+                    label_dentro5.after(42,label_dentro5.destroy())
+                    label_dentro6.after(42,label_dentro6.destroy())
 
                 # Show the planes
 
