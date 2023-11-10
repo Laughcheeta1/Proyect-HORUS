@@ -38,7 +38,7 @@ class App(customtkinter.CTk):
             videoPath = self.entry_path.get()
             serv = Service(videoPath)
 
-            # displayJsons = []
+            displayJsons = []
 
             while True:
                 # for Json in displayJsons:
@@ -63,30 +63,36 @@ class App(customtkinter.CTk):
                     maxRange = plane["max_range"]
                     quantityOfThePlane = numberOfPlanes[classNumber]
 
-                    label_image = customtkinter.CTkLabel(self.intFrame, image= customtkinter.CTkImage(dark_image=Image.open(f"./AIRPLANES/{plane['className']}.jpg"), size=(400,300)), text=" ")
-                    label_image.pack(side = "top")
-                    label_dentro1 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Name: {name}")
-                    label_dentro1.pack(side = "top")
-                    label_dentro2 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Purpose: {purpose}")
-                    label_dentro2.pack(side = "top")
-                    label_dentro3 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Armament: {armament}")
-                    label_dentro3.pack(side = "top")
-                    label_dentro4 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Max Speed: {maxSpeed}")
-                    label_dentro4.pack(side = "top")
-                    label_dentro5 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Max Range: {maxRange}")
-                    label_dentro5.pack(side = "top")
-                    label_dentro6 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Quantity: {quantityOfThePlane}")
-                    label_dentro6.pack(side = "top")
+                    if not classNumber in displayJsons:
+
+                        label_image = customtkinter.CTkLabel(self.intFrame, image= customtkinter.CTkImage(dark_image=Image.open(f"./AIRPLANES/{plane['className']}.jpg"), size=(400,300)), text=" ")
+                        label_image.pack(side = "top")
+                        label_dentro1 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Name: {name}")
+                        label_dentro1.pack(side = "top")
+                        label_dentro2 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Purpose: {purpose}")
+                        label_dentro2.pack(side = "top")
+                        label_dentro3 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Armament: {armament}")
+                        label_dentro3.pack(side = "top")
+                        label_dentro4 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Max Speed: {maxSpeed}")
+                        label_dentro4.pack(side = "top")
+                        label_dentro5 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Max Range: {maxRange}")
+                        label_dentro5.pack(side = "top")
+                        label_dentro6 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Quantity: {quantityOfThePlane}")
+                        label_dentro6.pack(side = "top")
+
+                        displayJsons.append(classNumber)
+
+
 
                     # displayJsons.append([label_image, label_dentro1, label_dentro2, label_dentro3, label_dentro4, label_dentro5, label_dentro6])
 
-                    label_image.after(420,label_image.destroy())
-                    label_dentro1.after(420,label_dentro1.destroy())
-                    label_dentro2.after(420,label_dentro2.destroy())
-                    label_dentro3.after(420,label_dentro3.destroy())
-                    label_dentro4.after(420,label_dentro4.destroy())
-                    label_dentro5.after(420,label_dentro5.destroy())
-                    label_dentro6.after(420,label_dentro6.destroy())
+                    label_image.after(5000,label_image.destroy())
+                    label_dentro1.after(5000,label_dentro1.destroy())
+                    label_dentro2.after(5000,label_dentro2.destroy())
+                    label_dentro3.after(5000,label_dentro3.destroy())
+                    label_dentro4.after(5000,label_dentro4.destroy())
+                    label_dentro5.after(5000,label_dentro5.destroy())
+                    label_dentro6.after(5000,label_dentro6.destroy())
 
                 # Show the planes
 
