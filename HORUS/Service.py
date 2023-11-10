@@ -25,4 +25,8 @@ class Service:
             else:
                 quantity[int(plane)] = 1
 
-        return [self.findPlaneMethod(int(classNumber)) for classNumber in quantity.keys()], quantity, frame
+
+        planeJsons = [self.findPlaneMethod(int(classNumber)) for classNumber in quantity.keys()]
+        print(planeJsons)
+        print(quantity)
+        return planeJsons, quantity, frame

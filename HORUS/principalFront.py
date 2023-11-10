@@ -21,7 +21,7 @@ class App(customtkinter.CTk):
 
         # configure window
         self.title("HORUS AI Object Detector")
-        self.geometry(f"{800}x{600}")
+        self.geometry(f"{1600}x{1200}")
 
         # configure grid layout (4x4)
         self.grid_columnconfigure(1, weight=1)
@@ -94,7 +94,70 @@ class App(customtkinter.CTk):
                     label_dentro5.after(5000,label_dentro5.destroy())
                     label_dentro6.after(5000,label_dentro6.destroy())
 
-                # Show the planes
+        def simulate():
+            listOfPlanes = [{
+                "_id": "65492efea58418bb8f2611e9",
+                "className": "AV8B",
+                "name": "AV8B Harrier II",
+                "purpose": "Apoyo aéreo cercano a las fuerzas terrestres",
+                "armament": "Cañón GAU-12 Equalizer de 25 mm, cadencia de 4.200 disparos por minuto",
+                "max_speed": "1,0 Mach",
+                "max_range": "700 km",
+                "classNumber": 3
+                
+            },
+            {
+                "_id": "65492f3ba58418bb8f2611fa",
+                "className": "F18",
+                "name": "F/A 18 Hornet",
+                "purpose": "Detectar aviones enemigos a largas distancias",
+                "armament": "Cañon M61 Vulcan y bombas convencionales guiadas por lasers y GPS",
+                "max_speed": "1915 Km/h",
+                "max_range": "2000 Km",
+                "classNumber": 17
+            },
+            {
+                "_id": {
+                    "$oid": "65492f4ca58418bb8f2611fc"
+                },
+                "className": "F35",
+                "name": "F-35 lightning II",
+                "purpose": "Proporciona superioridad aerea y ataques a tierra",
+                "armament": "Cañon GAU-22/A y bombas convencionales guiadas por lasers y GPS",
+                "max_speed": "1.6 Mach",
+                "max_range": "2200 Km",
+                "classNumber": 19
+            }]
+            numberOfPlanes = {
+                3 : 1,
+                17 : 1,
+                19 : 3
+            }
+
+            for plane in listOfPlanes:
+                    classNumber = plane["classNumber"]
+                    name = plane["name"]
+                    purpose = plane["purpose"]
+                    armament = plane["armament"]
+                    maxSpeed = plane["max_speed"]
+                    maxRange = plane["max_range"]
+                    quantityOfThePlane = numberOfPlanes[classNumber]
+
+                    label_image = customtkinter.CTkLabel(self.intFrame, image= customtkinter.CTkImage(dark_image=Image.open(f"./AIRPLANES/{plane['className']}.jpg"), size=(400,300)), text=" ")
+                    label_image.pack(side = "top")
+                    label_dentro1 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Name: {name}")
+                    label_dentro1.pack(side = "top")
+                    label_dentro2 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Purpose: {purpose}")
+                    label_dentro2.pack(side = "top")
+                    label_dentro3 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Armament: {armament}")
+                    label_dentro3.pack(side = "top")
+                    label_dentro4 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Max Speed: {maxSpeed}")
+                    label_dentro4.pack(side = "top")
+                    label_dentro5 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Max Range: {maxRange}")
+                    label_dentro5.pack(side = "top")
+                    label_dentro6 = customtkinter.CTkLabel(self.intFrame, font=customtkinter.CTkFont(size=11, weight="bold"), text=f"- Quantity: {quantityOfThePlane}")
+                    label_dentro6.pack(side = "top")
+            
 
 
         # create sidebar frame with widgets
@@ -111,9 +174,9 @@ class App(customtkinter.CTk):
         self.sidebar_button_1.grid(row=3, column=0, padx=20, pady=0)
         self.sidebar_button_2 = customtkinter.CTkButton(self.sidebar_frame, command=startRecording, text="Start recording",fg_color="green")
         self.sidebar_button_2.grid(row=4, column=0, padx=20, pady=10)
+        self.sidebar_button_3 = customtkinter.CTkButton(self.sidebar_frame, command=simulate, text="simulate",fg_color="green")
+        self.sidebar_button_3.grid(row=5, column=0, padx=20, pady=10)
       
-        self.appearance_mode_label = customtkinter.CTkLabel(self.sidebar_frame, text="Appearance Mode:", anchor="w")
-        self.appearance_mode_label.grid(row=5, column=0, padx=20, pady=(10, 0))
         self.appearance_mode_optionemenu = customtkinter.CTkOptionMenu(self.sidebar_frame, values=["Light", "Dark", "System"],
                                                                        command=self.change_appearance_mode_event)
         self.appearance_mode_optionemenu.grid(row=6, column=0, padx=20, pady=(10, 10))

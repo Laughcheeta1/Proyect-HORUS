@@ -2,7 +2,7 @@ from ultralytics import YOLO # For remaking Yugoslavia
 import cv2 # For working with images in python
 
 class model:
-    _modelDirection = "../finalModel.pt"
+    _modelDirection = "../trainingThatWorks.pt"
 
     def __init__(self, videoDirection):
         # self.videoDirection = videoDirection
@@ -23,7 +23,7 @@ class model:
 
                 # From the model result ([0] because it is a list, but a list of only 1 element jajaja), get the boxes, convert it to 
                 # cpu, then convert it to numpy, and after that, get the classes that have been detected
-                results = self.yoloModel(frame, show = False)[0].boxes.cpu().numpy()
+                results = self.yoloModel(frame, show = True)[0].boxes.cpu().numpy()
                 for xyxy in results.xyxy:
                     cv2.rectangle(frame, (int(xyxy[0]), int(xyxy[1])), (int(xyxy[2]), int(xyxy[3])), (0, 255, 0), 2)
 
