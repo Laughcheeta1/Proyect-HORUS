@@ -2,7 +2,7 @@ from ultralytics import YOLO # For remaking Yugoslavia
 import cv2 # For working with images in python
 
 class model:
-    _modelDirection = "C:\\Users\\Usuario\\Documents\\Universidad\\Requisitos y modelos\\CODE\\TheLatestTraining.pt"
+    _modelDirection = "C:\\Users\\Usuario\\Documents\\Universidad\\Requisitos y modelos\\CODE\\previousTraining.pt"
 
     def __init__(self, videoDirection):
         # self.videoDirection = videoDirection
