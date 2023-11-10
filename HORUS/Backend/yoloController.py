@@ -12,6 +12,9 @@ class model:
         if not self.videoInput.isOpened(): # Check if the video can be opened
             return None
         
+
+    # Input: nothing
+    # Returns: list of the class numbers detected by Yolo
     def readFrame(self):
         if self.videoInput.isOpened(): # Check if the video is still opened
             success, frame = self.videoInput.read() # Read the frame
