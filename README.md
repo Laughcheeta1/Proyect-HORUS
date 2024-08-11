@@ -7,4 +7,4 @@ Thats why the master branch (Contrary to what it should be) does not hold the la
 
 
 # Note
-8/11/2024 - I just read this again, I'll fix the problem in the disclaimer as soon as possible when I finish the Jobly Startup and other projects.
+8/11/2024 - I just opened this repository again, I'll fix the problem in the disclaimer as soon as possible when I finish the Jobly Startup and other projects.
